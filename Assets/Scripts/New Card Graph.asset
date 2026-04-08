@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51edca6a15bf75840be46ce32586a361, type: 3}
+  m_Name: New Card Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 8537963263579624974}
+  - {fileID: 4840986398934188457}
+  - {fileID: 2162062823111756349}
+--- !u!114 &2162062823111756349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45a17f88cab4094fa75baf5e2376070, type: 3}
+  m_Name: Card
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 200, y: 280}
+  ports:
+    keys:
+    - left
+    - right
+    - input
+    values:
+    - _fieldName: left
+      _node: {fileID: 2162062823111756349}
+      _typeQualifiedName: CardNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: right
+      _node: {fileID: 2162062823111756349}
+      _typeQualifiedName: CardNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 2162062823111756349}
+      _typeQualifiedName: CardNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: right
+        node: {fileID: 8537963263579624974}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  description: "\u0412\u044B \u0436\u0435\u0441\u0442\u043E\u043A\u0438"
+  leftChoice: "\u0417\u0430\u043A\u0440\u044B\u0442\u044C"
+  rightChoice: 
+  left: {fileID: 0}
+  right: {fileID: 0}
+--- !u!114 &4840986398934188457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45a17f88cab4094fa75baf5e2376070, type: 3}
+  m_Name: Card
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 200, y: 56}
+  ports:
+    keys:
+    - left
+    - right
+    - input
+    values:
+    - _fieldName: left
+      _node: {fileID: 4840986398934188457}
+      _typeQualifiedName: CardNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: right
+      _node: {fileID: 4840986398934188457}
+      _typeQualifiedName: CardNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 4840986398934188457}
+      _typeQualifiedName: CardNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: left
+        node: {fileID: 8537963263579624974}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  description: "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0432\u0430\u0441!"
+  leftChoice: "\u0417\u0430\u043A\u0440\u044B\u0442\u044C"
+  rightChoice: 
+  left: {fileID: 0}
+  right: {fileID: 0}
+--- !u!114 &8537963263579624974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45a17f88cab4094fa75baf5e2376070, type: 3}
+  m_Name: Card
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -184, y: -72}
+  ports:
+    keys:
+    - left
+    - right
+    - input
+    values:
+    - _fieldName: left
+      _node: {fileID: 8537963263579624974}
+      _typeQualifiedName: CardNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 4840986398934188457}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: right
+      _node: {fileID: 8537963263579624974}
+      _typeQualifiedName: CardNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 2162062823111756349}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 8537963263579624974}
+      _typeQualifiedName: CardNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  input: {fileID: 0}
+  description: "\u041A\u043E\u0440\u043E\u043B\u044C, \u0443 \u043D\u0430\u0441 \u0433\u043E\u043B\u043E\u0434"
+  leftChoice: "\u0414\u0430\u0442\u044C \u0435\u0434\u0443"
+  rightChoice: "\u0418\u0433\u043D\u043E\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C"
+  left: {fileID: 0}
+  right: {fileID: 0}
