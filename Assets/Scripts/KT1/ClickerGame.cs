@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ClickerGame : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -15,12 +16,29 @@ public class ClickerGame : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private GameData data;
     private ISaveSystem saveSystem;
 
+
+    // - 2
+    private ResourceManager resourceManager;
+    public Image buttonImage;
+
+    //
+
     void Start()
     {
         saveSystem = new JsonSaveSystem();
         // saveSystem = new PlayerPrefsSaveSystem();
 
         data = saveSystem.Load();
+
+
+        resourceManager = new ResourceManager(new ResourcesLoader());
+
+        Sprite sprite = resourceManager.Load<Sprite>("Sprites/button");
+
+        if (sprite != null)
+        {
+            buttonImage.sprite = sprite;
+        }
     }
 
     void Update()
@@ -57,6 +75,9 @@ public class ClickerGame : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     void OnApplicationQuit()
     {
         saveSystem.Save(data);
+
+        if (buttonImage.sprite != null)
+            resourceManager.Unload(buttonImage.sprite);
     }
     public void OnPointerDownUI()
     {
@@ -76,5 +97,6 @@ public class ClickerGame : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         saveSystem.Save(data);
     }
+
 
 }

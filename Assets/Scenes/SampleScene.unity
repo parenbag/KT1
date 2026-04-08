@@ -537,6 +537,7 @@ MonoBehaviour:
   scoreText: {fileID: 1678142238}
   timeText: {fileID: 2058655445}
   baseValue: 10
+  buttonImage: {fileID: 1752899866}
 --- !u!4 &1299953059
 Transform:
   m_ObjectHideFlags: 0
